@@ -18,9 +18,9 @@ end
     if valueArray.length == 1
       minValue = inputValue.to_i
     elsif inputValue.to_i < minValue.to_i
-      minvalue = inputValue
+      minvalue = inputValue.to_i
     elsif inputValue.to_i > maxValue.to_i
-      maxValue = inputValue
+      maxValue = inputValue.to_i
     end
   end
   break if valueArray.length == MAXLEN
@@ -29,10 +29,10 @@ end
 valueArray.each_with_index { |val, index| puts "valueArray[#{index}] = #{val}" }
 if valueArray.length > 0
   puts 'Gia tri lon nhat trong mang %d' % maxValue
-  puts 'Gia tri nho nhat trong mang %d' % minvalue
+  puts 'Gia tri nho nhat trong mang %d' % minValue
 end
 sum = 0
 if valueArray.length > 0
   valueArray.each { |x| sum += x }
-  puts format('Gia tri trung binh cac phan tu cua mang = %.2f', sum.to_f / valueArray.length)
+  puts 'Gia tri trung binh cac phan tu cua mang = %.2f' % [sum.to_f/valueArray.length]
 end
