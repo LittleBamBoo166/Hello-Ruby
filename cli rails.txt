@@ -1,0 +1,27 @@
+rails g controller home index	-> create a controller
+rails g scaffold friends first_name:string last_name:string email:string phone:string twitter:string	-> create dababase
+rails db:migrate
+
+gem install bundler
+bundle install
+rails generate devise:install
+rails g devise:views
+rails generate devise user(or sth)
+rails db:migrate
+
+rails g migration add_user_id_to_friends user_id:integer:index
+rails db:migrate
+
+1.4 Supported Types
+:binary
+:boolean
+:date
+:datetime
+:decimal
+:float
+:integer
+:primary_key
+:string
+:text
+:time
+:timestamp
